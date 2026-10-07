@@ -20,10 +20,26 @@ let userRole: Role = 0; // 0 => Admin, 1 => Editor, 2 => Guest
 userRole = Role.Guest;
 
 // Literal types.
-let userRole2: "admin" | "editor" | "guest" = "admin";
+
+//
+type Role2 = "admin" | "editor" | "guest";
+type User2 = {
+  name: string;
+  age: number;
+  role: Role2;
+  permission: string[];
+};
+
+let userRole2: Role2 = "admin";
 // ..
 userRole2 = "editor";
 
 let possibleResults2: [1 | -1, number];
 possibleResults2 = [1, -1];
 // possibleResults2 = [3, -1]; // Wont work.
+
+//
+
+function access(role: Role2) {
+  // ..
+}
