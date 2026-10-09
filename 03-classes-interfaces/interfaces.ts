@@ -19,7 +19,7 @@ class AuthenticatableUser implements Authenticatable {
   logout() {}
 }
 
-//
+// ..
 function authenticate(user: Authenticatable) {
   user.login();
 }
